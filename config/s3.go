@@ -15,7 +15,7 @@ type S3Config struct {
 func GetS3Config() *S3Config {
 	return &S3Config{
 		Region:              getEnvOrDefault("AWS_REGION", "ap-south-1"),
-		Bucket:              getEnvOrDefault("AWS_S3_BUCKET", "unorganizedbucket-dev-971709774307-ap-south-1/app-run"),
+		Bucket:              getEnvOrDefault("AWS_S3_BUCKET", "unorganizedbucket-dev-971709774307-ap-south-1"),
 		MaxRetries:          getEnvAsInt("AWS_MAX_RETRIES", 3),
 		EnablePresignedURLs: getEnvAsBool("AWS_S3_ENABLE_PRESIGNED_URLS", true),
 	}
