@@ -23,7 +23,7 @@ func NewUserService(s3Service *S3Service) *UserService {
 }
 
 func (us *UserService) getUserKey(userID string) string {
-	return fmt.Sprintf("users/%s/profile.json", userID)
+	return fmt.Sprintf("app-run/users/%s/profile.json", userID)
 }
 
 func (us *UserService) CreateUser(ctx context.Context, req *models.CreateUserRequest) (*models.User, error) {
